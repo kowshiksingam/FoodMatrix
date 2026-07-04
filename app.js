@@ -27,7 +27,7 @@ const MENU_DATA = {
     { "name": "Manchurian", "img": "https://media.istockphoto.com/id/1333972938/photo/cabbage-manchurian.jpg?s=612x612&w=0&k=20&c=oGPATDCUY7-THeDpCHqcf4SmRVdJ8wKk2y61NxvXXKM=", "rating": 4.8, "price": 130 },
     { "name": "KFC", "img": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80", "rating": 4.9, "price": 190 },
     { "name": "Chilli Prawns", "img": "https://media.istockphoto.com/id/1407544739/photo/roasted-shrimp-with-chili-and-salt.jpg?s=612x612&w=0&k=20&c=wcQZUGl1BQPEzVV_8nqmvTUeRaeSdpBxOZYsuFf0ReI=", "rating": 4.8, "price": 280 },
-    { "name": "Chicken Lolipop", "img": "https://t3.ftcdn.ftcdn.net/jpg/03/74/12/30/360_F_374123015_5NXgf5TJshJSZJGu4DewFJveeyzsmkui.jpg", "rating": 4.9, "price": 200 }
+    { "name": "Chicken Lolipop", "img": "https://t3.ftcdn.net/jpg/03/74/12/30/360_F_374123015_5NXgf5TJshJSZJGu4DewFJveeyzsmkui.jpg", "rating": 4.9, "price": 200 }
   ],
   "biryani": [
     { "name": "Mutton Biryani", "img": "https://as1.ftcdn.net/jpg/08/88/59/62/1000_F_888596228_FKsyM4Xc2raXs5lCR3SHhW6Xs6AT1DgE.jpg", "rating": 4.9, "price": 300 },
@@ -92,14 +92,14 @@ const MENU_DATA = {
 };
 
 const CATEGORIES = {
-  "vegstart": { title: "Veg Starters", desc: "Crispy, fresh, and perfectly seasoned vegetarian appetizers.", img: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80" },
-  "nonvegstart": { title: "Non-Veg Starters", desc: "Sizzling meat and seafood starters packed with bold, robust flavors.", img: "https://thumbs.dreamstime.com/b/chicken-chinese-cuisine-s-deep-fried-course-crazy-saltiness-crunchiness-to-punchy-flavours-curry-leaves-ginger-195902298.jpg" },
-  "biryani": { title: "Biryani & Rice", desc: "Fragrant long-grain basmati cooked with secret spices and tender ingredients.", img: "https://as2.ftcdn.net/jpg/13/14/47/45/1000_F_1314474517_L75hPsnffsOEHhvkV19nQM5Xwfl9OKrj.jpg" },
-  "noodles": { title: "Noodles & Pasta", desc: "Pan-fried noodles tossed with fresh vegetables and gourmet sauces.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOgvRSQ2AZ-vxnuT1SSkeJAk1cInBh83Dpug&s" },
-  "soup": { title: "Soups & Broths", desc: "Warm, comforting, and nutrient-rich bowls to enrich your palate.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNw5vsWBLAuTfC_xDSoa29a4e1jzv3ADdwgg&s" },
-  "salad": { title: "Salads & Greens", desc: "Chilled fresh greens, premium dressings, and light, healthy pairings.", img: "https://t3.ftcdn.net/jpg/03/89/33/70/240_F_389337028_wX7vudCV0pjpN1dVdhewW3jmfrOiqjMd.jpg" },
-  "fish": { title: "Seafood Specials", desc: "Coastal catches fried, curried, or grilled to ocean-fresh perfection.", img: "https://img-global.cpcdn.com/recipes/2bc990b35f82f2ef/680x482cq70/prawn-pakoda-recipe-main-photo.jpg" },
-  "desert": { title: "Desserts & Sweets", desc: "Decadent cakes, thick gourmet milkshakes, and sweet chilled desserts.", img: "https://assets.ccbp.in/frontend/responsive-website/em-coffee-bourbon-img.png" }
+  "vegstart": { title: "Veg Starters", desc: "Crispy, fresh, and perfectly seasoned vegetarian appetizers.", img: "assets/cat-vegstart.png" },
+  "nonvegstart": { title: "Non-Veg Starters", desc: "Sizzling meat and seafood starters packed with bold, robust flavors.", img: "assets/cat-nonvegstart.png" },
+  "biryani": { title: "Biryani & Rice", desc: "Fragrant long-grain basmati cooked with secret spices and tender ingredients.", img: "assets/cat-biryani.png" },
+  "noodles": { title: "Noodles & Pasta", desc: "Pan-fried noodles tossed with fresh vegetables and gourmet sauces.", img: "assets/cat-noodles.png" },
+  "soup": { title: "Soups & Broths", desc: "Warm, comforting, and nutrient-rich bowls to enrich your palate.", img: "assets/cat-soup.png" },
+  "salad": { title: "Salads & Greens", desc: "Chilled fresh greens, premium dressings, and light, healthy pairings.", img: "assets/cat-salad.png" },
+  "fish": { title: "Seafood Specials", desc: "Coastal catches fried, curried, or grilled to ocean-fresh perfection.", img: "assets/cat-fish.png" },
+  "desert": { title: "Desserts & Sweets", desc: "Decadent cakes, thick gourmet milkshakes, and sweet chilled desserts.", img: "assets/cat-desert.png" }
 };
 
 // ── Application State ──────────────────────────────────────
@@ -283,7 +283,7 @@ function renderHome() {
     const cat = CATEGORIES[key];
     categoriesHTML += `
       <div class="category-card" onclick="window.location.hash='#category/${key}'">
-        <img src="${cat.img}" class="category-bg-img" alt="${cat.title}" onerror="this.src='https://assets.ccbp.in/frontend/responsive-website/food-serve.png'">
+        <img src="${cat.img}" class="category-bg-img" alt="${cat.title}" onerror="this.src='assets/fallback.png'">
         <div class="category-overlay">
           <h3>${cat.title}</h3>
           <span class="category-link">View Dishes <i class="fa-solid fa-arrow-right-long"></i></span>
@@ -305,7 +305,7 @@ function renderHome() {
         </div>
       </div>
       <div class="hero-image-wrapper">
-        <img src="https://assets.ccbp.in/frontend/responsive-website/foodmunch-banner-bg.png" class="hero-img" alt="Gourmet Food Display">
+        <img src="assets/hero-bg.png" class="hero-img" alt="Gourmet Food Display">
       </div>
     </section>
 
@@ -348,7 +348,7 @@ function renderHome() {
     <!-- Split Banner: Healthy Food -->
     <section class="split-banner">
       <div class="banner-img-wrapper">
-        <img src="https://assets.ccbp.in/frontend/responsive-website/foodmunch-healthy-food-img.png" alt="Healthy Meals">
+        <img src="assets/healthy-food.png" alt="Healthy Meals">
       </div>
       <div class="banner-content">
         <h2>Fresh, Healthy, Organic</h2>
@@ -370,7 +370,7 @@ function renderHome() {
         <button class="btn-primary" onclick="window.location.hash='#category/desert'">Order Desserts</button>
       </div>
       <div class="banner-img-wrapper">
-        <img src="https://assets.ccbp.in/frontend/responsive-website/foodmunch-delivery-payment-img.png" alt="Payment & Delivery">
+        <img src="assets/delivery-payment.png" alt="Payment & Delivery">
       </div>
     </section>
   `;
@@ -394,7 +394,7 @@ function renderCategory(categoryId) {
     itemsHTML += `
       <div class="food-card">
         <div class="food-img-box">
-          <img src="${item.img}" class="food-card-img" alt="${item.name}" onerror="this.src='https://assets.ccbp.in/frontend/responsive-website/food-serve.png'">
+          <img src="${item.img}" class="food-card-img" alt="${item.name}" onerror="this.src='assets/fallback.png'">
           <span class="rating-tag"><i class="fa-solid fa-star"></i> ${item.rating}</span>
         </div>
         <div class="food-info">
@@ -446,7 +446,7 @@ function renderSearchResults(query) {
       itemsHTML += `
         <div class="food-card">
           <div class="food-img-box">
-            <img src="${item.img}" class="food-card-img" alt="${item.name}" onerror="this.src='https://assets.ccbp.in/frontend/responsive-website/food-serve.png'">
+            <img src="${item.img}" class="food-card-img" alt="${item.name}" onerror="this.src='assets/fallback.png'">
             <span class="rating-tag"><i class="fa-solid fa-star"></i> ${item.rating}</span>
           </div>
           <div class="food-info">
@@ -501,7 +501,7 @@ function renderCart() {
     const subtotal = item.price * item.qty;
     itemsHTML += `
       <div class="cart-card-item">
-        <img src="${item.img}" class="cart-item-thumbnail" alt="${item.name}" onerror="this.src='https://assets.ccbp.in/frontend/responsive-website/food-serve.png'">
+        <img src="${item.img}" class="cart-item-thumbnail" alt="${item.name}" onerror="this.src='assets/fallback.png'">
         <div class="cart-item-details">
           <h4 class="cart-item-title">${item.name}</h4>
           <p class="cart-item-unit-price">₹${item.price} each</p>
