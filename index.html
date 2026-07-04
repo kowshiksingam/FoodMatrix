@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Matrix 🍽️ – Premium Food Ordering Experience</title>
+  <meta name="description" content="Satisfy your gourmet cravings. Order delicious meals from Food Matrix with lightning-fast delivery and real-time order tracking.">
+  
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Premium Header Navbar -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <a href="#home" class="logo-wrapper">
+        <img src="https://assets.ccbp.in/frontend/responsive-website/food-munch-img.png" alt="Food Matrix Logo" class="brand-logo">
+        <span class="brand-name">Food <span class="accent-text">Matrix</span></span>
+      </a>
+
+      <!-- Location Picker -->
+      <div class="location-picker" id="header-location-picker">
+        <i class="fa-solid fa-location-dot loc-icon"></i>
+        <span class="loc-text" id="selected-address">Set Delivery Location</span>
+        <i class="fa-solid fa-chevron-down loc-arrow"></i>
+        <!-- Dropdown Dialog -->
+        <div class="location-dropdown" id="location-dropdown-menu">
+          <h4>Select Location</h4>
+          <input type="text" id="location-input-field" placeholder="Enter street address, city...">
+          <button id="save-location-btn">Confirm Location</button>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon-header"></i>
+        <input type="text" id="global-search-input" placeholder="Search gourmet meals, starters, desserts...">
+      </div>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <!-- Home Button -->
+        <a href="#home" class="nav-btn-link" title="Menu Home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+
+        <!-- Cart Button -->
+        <a href="#cart" class="cart-trigger" id="cart-nav-trigger">
+          <div class="cart-icon-wrapper">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge" id="nav-cart-badge" style="display: none;">0</span>
+          </div>
+          <span class="cart-label">Cart</span>
+        </a>
+
+        <!-- User Authentication Status -->
+        <div class="user-auth-zone" id="user-auth-zone">
+          <a href="#sign-in" class="login-btn" id="login-nav-btn">
+            <i class="fa-solid fa-user-lock"></i>
+            <span>Sign In</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Global Banner / Announcement -->
+  <div class="announcement-banner">
+    <p>⚡ Get Free Delivery on orders above ₹499! Use Code: <span class="promo-pill">FOOD10</span> for 10% off.</p>
+  </div>
+
+  <!-- Dynamic Application Root View Mount -->
+  <main id="app-root" class="app-view-container">
+    <!-- Dynamic views (Home, Category, Cart, Checkout, Success, Auth) will render here -->
+    <div class="global-spinner-wrapper" id="initial-loading-spinner">
+      <div class="premium-spinner"></div>
+      <p>Preparing Gourmet Menu...</p>
+    </div>
+  </main>
+
+  <!-- Premium Unified Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand-section">
+        <img src="https://assets.ccbp.in/frontend/responsive-website/food-munch-img.png" alt="Food Matrix" class="footer-logo">
+        <h3>Food <span class="accent-text">Matrix</span></h3>
+        <p>Crafting delicious moments, delivered fresh to your doorstep. Experience premium dining at home.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links-grid">
+        <div class="footer-col">
+          <h4>Explore Menu</h4>
+          <ul>
+            <li><a href="#category/vegstart">Veg Starters</a></li>
+            <li><a href="#category/nonvegstart">Non-Veg Starters</a></li>
+            <li><a href="#category/biryani">Biryani & Mains</a></li>
+            <li><a href="#category/noodles">Noodles & Pasta</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support & Info</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Our Chef</a></li>
+            <li><a href="#">FAQ & Help</a></li>
+            <li><a href="#">Delivery Policies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Payment Methods</h4>
+          <p>We accept all major credit cards, UPI, Wallets, and Net Banking.</p>
+          <div class="payment-icons">
+            <i class="fa-brands fa-cc-visa" title="Visa"></i>
+            <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fa-solid fa-money-bill-transfer" title="UPI / Net Banking"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Food Matrix Restaurant. All rights reserved. Managed by Rahul.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification System -->
+  <div class="toast-notification-center" id="global-toast-center"></div>
+
+  <!-- Main JavaScript App Controller -->
+  <script src="app.js"></script>
+</body>
+</html>
